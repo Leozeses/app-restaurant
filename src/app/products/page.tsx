@@ -6,7 +6,7 @@ const ProductsPage = () => {
     <div className="p-5 border-red-500 rounded-xl">
       <h1 className="text-red-500">Products Page</h1>
       <Button>FSW Donalds</Button>
-      <Input placeholder="Bora fechar esse projeto"></Input>
+      <Input placeholder="Bora fechar esse projeto!"></Input>
     </div>
   );
 };
