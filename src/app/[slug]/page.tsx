@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { db } from "@/lib/prisma";
 import Image from "next/image";
@@ -33,7 +34,9 @@ const RestaurantPages = async ({ params }: RestaurantPageProps) => {
       </div>
       <div className="grid grid-cols-2 pt-14"></div>
       <Card>
-        <CardContent className="flex flex-col items-center gap-8 py-8"></CardContent>
+        <CardContent className="flex flex-col items-center gap-8 py-8">
+          <Button></Button>
+        </CardContent>
       </Card>
     </div>
   );
