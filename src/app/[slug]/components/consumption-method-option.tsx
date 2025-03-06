@@ -1,18 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { ConsumptionMethod } from "@prisma/client";
 import Image from "next/image";
+import Link from "next/link";
 
-interface ComsumptionMethodOptionProps {
+interface ConsumptionMethodOptionProps {
   imageUrl: string;
   imageAlt: string;
   buttonText: string;
+  option: ConsumptionMethod;
 }
 
 const ComsumptionMethodOptions = ({
   imageUrl,
   imageAlt,
   buttonText,
-}: ComsumptionMethodOptionProps) => {
+  option,
+}: ConsumptionMethodOptionProps) => {
   return (
     <Card>
       <CardContent className="flex flex-col items-center gap-8 py-8">
@@ -25,7 +29,7 @@ const ComsumptionMethodOptions = ({
           ></Image>
         </div>
         <Button variant="secondary" className="rounded-full">
-          {buttonText}
+          <Link href={`/menu?ConsumptionMethod=${option}`}>{buttonText}</Link>
         </Button>
       </CardContent>
     </Card>

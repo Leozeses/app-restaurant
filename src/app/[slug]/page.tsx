@@ -1,7 +1,7 @@
 import { db } from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import ComsumptionMethodOptions from "./components/consumption-method-option";
+import ConsumptionMethodOptions from "./components/consumption-method-option";
 
 interface RestaurantPageProps {
   params: Promise<{ slug: string }>;
@@ -32,12 +32,14 @@ const RestaurantPages = async ({ params }: RestaurantPageProps) => {
         </p>
       </div>
       <div className="grid grid-cols-2 gap-4 pt-14">
-        <ComsumptionMethodOptions
+        <ConsumptionMethodOptions
+          option="DINE_IN"
           buttonText={"Para comer aqui"}
           imageUrl={"/dine_in.png"}
           imageAlt={"Comer aqui"}
         />
-        <ComsumptionMethodOptions
+        <ConsumptionMethodOptions
+          option="TAKEAWAY"
           imageUrl={"/takeaway.png"}
           imageAlt={"Para levar"}
           buttonText={"Para levar"}
