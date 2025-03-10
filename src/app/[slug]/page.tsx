@@ -35,7 +35,7 @@ const RestaurantPages = async ({ params }: RestaurantPageProps) => {
         <ConsumptionMethodOptions
           slug={slug}
           option={"DINE_IN"}
-          buttonText={"Para comer aqui"}
+          buttonText={"Comer aqui"}
           imageUrl={"/dine_in.png"}
           imageAlt={"Comer aqui"}
         />
